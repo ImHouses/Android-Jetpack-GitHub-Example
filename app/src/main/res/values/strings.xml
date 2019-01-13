@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Github Example</string>
+    <string name="text_repositories">Repositories</string>
+    <string name="text_user_repositories">User Repos</string>
+    <string name="text_user">Search User</string>
+    <string name="text_info">Info</string>
+    <!-- Repositories. -->
+    <string name="title_repositories">Repositories</string>
+</resources>
