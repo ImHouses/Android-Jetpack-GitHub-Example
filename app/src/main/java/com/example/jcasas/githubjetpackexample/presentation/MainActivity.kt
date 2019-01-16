@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentTransaction
 import com.example.jcasas.githubjetpackexample.R
+import com.example.jcasas.githubjetpackexample.presentation.information.InformationFragment
 import com.example.jcasas.githubjetpackexample.presentation.repositories.RepositoriesFragment
 import com.example.jcasas.githubjetpackexample.presentation.showuser.ShowUserFragment
 import com.example.jcasas.githubjetpackexample.presentation.userrepositories.UserRepositoriesFragment
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mFragmentTransaction: FragmentTransaction
     private val repositoriesFragment: RepositoriesFragment = RepositoriesFragment()
+    private val informationFragment: InformationFragment = InformationFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.action_user -> {
                     mFragmentTransaction.replace(R.id.mainFrame, UserRepositoriesFragment())
+                }
+                R.id.action_info -> {
+                    mFragmentTransaction.replace(R.id.mainFrame, informationFragment)
                 }
                 else -> {
                     mFragmentTransaction.replace(R.id.mainFrame, ShowUserFragment())
