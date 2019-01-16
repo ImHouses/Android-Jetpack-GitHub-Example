@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="140dp"
     android:layout_marginBottom="10dp"
     android:layout_marginTop="10dp"
     android:padding="5dp"
@@ -16,10 +16,20 @@
         android:layout_height="@dimen/avatar_item_size"
         app:layout_constraintStart_toStartOf="parent"/>
     <TextView
+        android:id="@+id/textOwnerNameRepoItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAvatarRepoItem"
+        app:layout_constraintEnd_toEndOf="@+id/imageAvatarRepoItem"/>
+    <TextView
         android:id="@+id/textNameRepoItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:textColor="@android:color/black"
         android:textSize="25sp"
         app:layout_constraintStart_toEndOf="@id/imageAvatarRepoItem"
@@ -30,12 +40,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:textSize="16sp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:ellipsize="end"
+        android:maxLines="2"
         app:layout_goneMarginBottom="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textNameRepoItem"
-        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/imageAvatarRepoItem"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageAvatarRepoItem"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
